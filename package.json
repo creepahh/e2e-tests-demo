@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:e2e": "cypress run",
+    "report:open": "open cypress/reports/mochawesome-report/report.html",
+    "test:report": "npm run test:e2e && npm run report:open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^14.4.0",
-    "mochawesome": "^7.1.3"
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

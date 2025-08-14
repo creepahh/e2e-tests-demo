@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-08-14T07:53:28.197Z",
+    "end": "2025-08-14T07:53:38.649Z",
+    "duration": 10452,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5a9a70a9-8905-47e0-b50c-e0b9b603eaa9",
+      "title": "",
+      "fullFile": "cypress/e2e/transfer.cy.js",
+      "file": "cypress/e2e/transfer.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74ce3254-8f85-4bb1-83b0-f1acf3235562",
+          "title": "Transfer Funds - Parabank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "transfers funds successfully between accounts",
+              "fullTitle": "Transfer Funds - Parabank transfers funds successfully between accounts",
+              "timedOut": null,
+              "duration": 8522,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Navigate to the Transfer Funds page before filling the form\ncy.contains('Transfer Funds').click();\n// Now fill the form inputs\ncy.get('input[name=\"amount\"]').type('100');\n// Submit the transfer\ncy.get('input[type=\"submit\"]').click();\n// Assert success message\ncy.contains('Transfer Complete!').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"amount\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"amount\"]`, but never found it.\n    at Context.eval (webpack://my-cypress-project/./cypress/e2e/transfer.cy.js:21:7)",
+                "diff": null
+              },
+              "uuid": "1b6b9f3e-9663-41e7-af80-c3601cf73bfd",
+              "parentUUID": "74ce3254-8f85-4bb1-83b0-f1acf3235562",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1b6b9f3e-9663-41e7-af80-c3601cf73bfd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8522,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
